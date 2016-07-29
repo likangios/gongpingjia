@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let main:GPJMainTabBarViewController = GPJMainTabBarViewController()
+        
+        let nav:UINavigationController = UINavigationController.init(rootViewController: main)
+        
+        self.window?.rootViewController = nav
+        
         return true
     }
 
