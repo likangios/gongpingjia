@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GPJCustomTabBarView" customModule="gongpingjia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_375x66_.png" translatesAutoresizingMaskIntoConstraints="NO" id="lba-LR-Hbr">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlW-qC-h5X">
+                    <rect key="frame" x="213" y="6" width="21" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="21" id="Ny5-Jh-tdG"/>
+                        <constraint firstAttribute="height" constant="34" id="ryq-dF-0hm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="tabbar_item_3_unselect_21x34_.png">
+                        <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="tabbar_item_3_select_21x34_.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlI-2A-guV">
+                    <rect key="frame" x="132" y="-9" width="57" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Ep9-Ka-1ks"/>
+                        <constraint firstAttribute="width" constant="57" id="MAt-YF-j5K"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="tabbar_item_2_unselect_57x56_.png"/>
+                    <state key="selected" image="tabbar_item_2_selected_57x56_.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-S1-Las">
+                    <rect key="frame" x="80" y="7" width="21" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="dRG-Je-dpX"/>
+                        <constraint firstAttribute="width" constant="21" id="eLU-QF-fIQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="tabbar_item_1_unselect_21x34_.png">
+                        <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="tabbar_item_1_selected_21x34_.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGJ-5a-pyW">
+                    <rect key="frame" x="15" y="12" width="21" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="21" id="qPS-hb-B8K"/>
+                        <constraint firstAttribute="height" constant="34" id="qvd-II-rG4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="tabbar_item_0_unselect_19x37_.png">
+                        <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="tabbar_item_0_select_19x37_.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-16-Bft">
+                    <rect key="frame" x="284" y="12" width="21" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="EXK-i0-xnU"/>
+                        <constraint firstAttribute="width" constant="21" id="EpR-4B-8zb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="tabbar_item_4_unselect_19x35_.png">
+                        <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" image="tabbar_item_4_select_19x35_.png"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fGJ-5a-pyW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="5" id="1FC-7d-ERR"/>
+                <constraint firstAttribute="trailing" secondItem="lba-LR-Hbr" secondAttribute="trailing" id="3Ji-yd-zAs"/>
+                <constraint firstItem="RlW-qC-h5X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="41o-xU-rdz"/>
+                <constraint firstItem="jlI-2A-guV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-5" id="CAh-PS-UkK"/>
+                <constraint firstItem="jlI-2A-guV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SSp-8T-B41"/>
+                <constraint firstAttribute="bottom" secondItem="lba-LR-Hbr" secondAttribute="bottom" id="Vl9-GC-UwJ"/>
+                <constraint firstItem="lba-LR-Hbr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WtI-a6-rq1"/>
+                <constraint firstItem="lba-LR-Hbr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aTf-1f-A1r"/>
+                <constraint firstAttribute="trailing" secondItem="BtE-16-Bft" secondAttribute="trailing" constant="15" id="djY-F7-xef"/>
+                <constraint firstItem="fGJ-5a-pyW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="iDa-NP-JTd"/>
+                <constraint firstItem="RlW-qC-h5X" firstAttribute="leading" secondItem="jlI-2A-guV" secondAttribute="trailing" constant="31" id="nJR-qf-kOB"/>
+                <constraint firstItem="BtE-16-Bft" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="5" id="qmN-O5-1b7"/>
+                <constraint firstItem="jlI-2A-guV" firstAttribute="leading" secondItem="ijq-S1-Las" secondAttribute="trailing" constant="31" id="rno-Ym-CIr"/>
+                <constraint firstItem="ijq-S1-Las" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yB5-Ak-ZJm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="262" y="318"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tabbar_375x66_.png" width="375" height="66"/>
+        <image name="tabbar_item_0_select_19x37_.png" width="16" height="16"/>
+        <image name="tabbar_item_0_unselect_19x37_.png" width="19" height="37"/>
+        <image name="tabbar_item_1_selected_21x34_.png" width="21" height="34"/>
+        <image name="tabbar_item_1_unselect_21x34_.png" width="21" height="34"/>
+        <image name="tabbar_item_2_selected_57x56_.png" width="57" height="56"/>
+        <image name="tabbar_item_2_unselect_57x56_.png" width="57" height="56"/>
+        <image name="tabbar_item_3_select_21x34_.png" width="16" height="16"/>
+        <image name="tabbar_item_3_unselect_21x34_.png" width="21" height="34"/>
+        <image name="tabbar_item_4_select_19x35_.png" width="16" height="16"/>
+        <image name="tabbar_item_4_unselect_19x35_.png" width="19" height="35"/>
+    </resources>
+</document>

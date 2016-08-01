@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let main:GPJMainTabBarViewController = GPJMainTabBarViewController()
-        
-        let nav:UINavigationController = UINavigationController.init(rootViewController: main)
+        let nav:GPJBaseNavigationController = GPJBaseNavigationController.init(rootViewController: main)
         
         self.window?.rootViewController = nav
         

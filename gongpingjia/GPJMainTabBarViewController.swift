@@ -7,38 +7,62 @@
 //
 
 import UIKit
+import SnapKit
 
 class GPJMainTabBarViewController: UITabBarController,UITableViewDelegate,UITableViewDataSource {
 
+    func getRandColor() -> UIColor {
+        
+        let rand:UInt32 = 255
+        
+        return UIColor.init(red: (CGFloat)(arc4random_uniform(rand))/255.0, green: (CGFloat)(arc4random_uniform(rand))/255.0, blue: (CGFloat)(arc4random_uniform(rand))/255.0, alpha: 1.0)
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBarHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var vcs:[UIViewController] = []
         
-        for _ in 1...5 {
+        let classNameArr = ["GPJTest1ViewController","GPJTest2ViewController","GPJTest3ViewController","GPJTest4ViewController"]
+        
+        for  className in classNameArr{
             
-            let vc:UIViewController = UIViewController.init()
-            let rand:UInt32 = 255
-            vc.view.backgroundColor = UIColor.init(red: (CGFloat)(arc4random_uniform(rand))/255.0, green: (CGFloat)(arc4random_uniform(rand))/255.0, blue: (CGFloat)(arc4random_uniform(rand))/255.0, alpha: 1.0)
+            let vc:GPJBaseViewController = GPJBaseViewController.init(nibName: className, bundle: nil)
             
-            let nav:UINavigationController = UINavigationController.init(rootViewController: vc)
+            vc.view.backgroundColor = self.getRandColor()
             
-//            vc.navigationController!.title = "\(index)"
+            vc.navigationController?.title = className
             
+            let nav:GPJBaseNavigationController = GPJBaseNavigationController.init(rootViewController: vc)
             vcs.append(nav)
             
         }
         
-        let tabBarView:UIView = UIView.init(frame: self.tabBar.bounds)
-        
-        tabBarView.backgroundColor = UIColor.grayColor()
-        
-        self.tabBar.addSubview(tabBarView)
-        
-        
         self.setViewControllers(vcs, animated: true)
+
+        self.creatCustomTabBar()
+
         
-        // Do any additional setup after loading the view.
+        }
+    func creatCustomTabBar(){
+        
+        self.tabBar.barTintColor = UIColor.clearColor()
+        
+        let tabBar:GPJCustomTabBarView = NSBundle.mainBundle().loadNibNamed("GPJCustomTabBarView", owner: self, options: nil).last as! GPJCustomTabBarView
+        
+        self.view.addSubview(tabBar)
+        tabBar.snp_makeConstraints { (make) in
+            make.bottom.equalTo(-10)
+            make.right.equalTo(0)
+            make.left.equalTo(0)
+            make.height.equalTo(48)
+        }
+        
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
